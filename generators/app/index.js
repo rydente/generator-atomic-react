@@ -29,6 +29,12 @@ module.exports = generator.Base.extend({
       }
     ).on('end', () => {
 
+      // Copy ecosystem template
+      this.fs.move(
+        this.destinationPath('src/components/Main.js'),
+        this.destinationPath('src/components/ecosystems/Main.js'),
+      );
+
       // Run the create root method
       this.composeWith('atomic-react:root', {
         args: ['Root']
