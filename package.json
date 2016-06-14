@@ -1,7 +1,7 @@
 {
-  "name": "generator-react-webpack-redux",
+  "name": "generator-atomic-react",
   "version": "0.8.0",
-  "description": "Yeoman generator for ReactJS and Flux (redux) via Webpack",
+  "description": "Yeoman generator for ReactJS and Flux (redux) via Webpack using Atomic Design",
   "keywords": [
     "yeoman-generator",
     "reactjs",
@@ -11,23 +11,20 @@
     "scaffold",
     "front-end"
   ],
-  "homepage": "https://github.com/stylesuxx/generator-react-webpack-redux",
-  "bugs": "https://github.com/stylesuxx/generator-react-webpack-redux/issues",
+  "homepage": "https://github.com/ryayak1460/generator-atomic-react",
+  "bugs": "https://github.com/ryayak1460/generator-atomic-react/issues",
   "author": {
     "name": "Chris Landa",
     "email": "stylesuxx@gmail.com"
   },
-  "contributors": [
-    {
-      "name": "Christian Schilling",
-      "email": "cs@weblogixx.de",
-      "url": "https://github.com/weblogixx"
-    }
-  ],
+  "contributors": [{
+    "name": "Ryan Y.",
+    "email": "ryayak1460@protingumas.com"
+  }],
   "main": "generators/action/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/stylesuxx/generator-react-webpack-redux.git"
+    "url": "git://github.com/rydente/generator-atomic-react.git"
   },
   "scripts": {
     "test": "mocha",
