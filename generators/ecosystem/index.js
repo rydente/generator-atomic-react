@@ -10,14 +10,14 @@ module.exports = generator.Base.extend({
   },
 
   writing: function() {
-    const destination = utils.getDestinationPath(this.name, 'containers', 'js');
+    const destination = utils.getDestinationPath(this.name, 'components/ecosystems', 'js');
     const baseName = utils.getBaseName(this.name);
     const depth = this.name.split('/').length - 1;
     const prefix = '../'.repeat(depth);
 
-    // Copy container template
+    // Copy ecosystem template
     this.fs.copyTpl(
-      this.templatePath('Container.js'),
+      this.templatePath('Ecosystem.js'),
       this.destinationPath(destination),
       {
         name: baseName,
