@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Main from '../<%= prefix %>components/Main';
+import Main from '../<%= prefix %>components/ecosystems/Main';
 
 class <%= name %> extends Component {
   render() {

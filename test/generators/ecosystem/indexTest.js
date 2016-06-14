@@ -36,7 +36,7 @@ describe('atomic-react:ecosystem', () => {
 
     it('should have the proper prefix', (done) => {
       createGeneratedEcosystem('TestEcosystem', () => {
-        assert.fileContent('src/components/ecosystems/TestEcosystem.js', '../components/Main');
+        assert.fileContent('src/components/ecosystems/TestEcosystem.js', '../components/ecosystems/Main');
         done();
       });
     });
@@ -81,7 +81,7 @@ describe('atomic-react:ecosystem', () => {
 
     it('should have the proper prefix', (done) => {
       createGeneratedEcosystem('name/space/TestEcosystem', () => {
-        assert.fileContent('src/components/ecosystems/name/space/TestEcosystem.js', '../../../components/Main');
+        assert.fileContent('src/components/ecosystems/name/space/TestEcosystem.js', '../../../components/ecosystems/Main');
         done();
       });
     });
