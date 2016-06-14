@@ -1,13 +1,16 @@
-# generator-react-webpack-redux
+# generator-atomic-react
 > Generator-React-Webpack - with Flux Support (using Redux)
 
-[![Build Status](https://travis-ci.org/stylesuxx/generator-react-webpack-redux.svg?branch=master)](https://travis-ci.org/stylesuxx/generator-react-webpack-redux) ![Amount of Downloads per month](https://img.shields.io/npm/dm/generator-react-webpack-redux.svg "Amount of Downloads") [![Dependency Status](https://david-dm.org/stylesuxx/generator-react-webpack-redux.svg)](https://david-dm.org/stylesuxx/generator-react-webpack-redux) [![devDependency Status](https://david-dm.org/stylesuxx/generator-react-webpack-redux/dev-status.svg)](https://david-dm.org/stylesuxx/generator-react-webpack-redux#info=devDependencies) ![Node Version](https://img.shields.io/node/v/generator-react-webpack-redux.svg "Node Version")
+[![Build Status](https://travis-ci.org/ryayak1460/generator-atomic-react.svg?branch=master)](https://travis-ci.org/ryayak1460/generator-atomic-react) ![Amount of Downloads per month](https://img.shields.io/npm/dm/generator-atomic-react.svg "Amount of Downloads") [![Dependency Status](https://david-dm.org/ryayak1460/generator-atomic-react.svg)](https://david-dm.org/ryayak1460/generator-atomic-react) [![devDependency Status](https://david-dm.org/ryayak1460/generator-atomic-react/dev-status.svg)](https://david-dm.org/ryayak1460/generator-atomic-react#info=devDependencies) ![Node Version](https://img.shields.io/node/v/generator-atomic-react.svg "Node Version")
 
 ## What is it for?
-This generator can be used to create and manage projects that use React, Webpack and Flux (using [Redux](https://github.com/rackt/redux) as implementation). It depends on [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) as a base and extends it to create new reducers and actions.
+This generator can be used to create and manage projects that use React, Webpack and Flux (using [Redux](https://github.com/rackt/redux) as
+implementation) using Atomic Design. It depends on [generator-react-webpack](https://github.com/newtriks/generator-react-webpack) as a base and extends it to create new reducers and actions.
 
 ## What is included?
-generator-react-webpack-redux includes support for creating new reducers (and tests), as well as the creation of actions and components.
+generator-atomic-react includes support for creating new reducers (and tests), as well as the creation of actions, atoms,
+molecules, organisms and
+[ecosystems](https://medium.com/@yejodido/atomic-components-managing-dynamic-react-components-using-atomic-design-part-1-5f07451f261f#.n7oeo48cl).
 
 It also has support for the the features that are available in its parent project, generator-react-webpack. This includes the run-configuration, webpack, esLint and test-environment.
 
@@ -19,7 +22,7 @@ There are currently some features missing from the generator. These will be avai
 ## Installation
 ```bash
 npm install -g yo
-npm install -g generator-react-webpack-redux
+npm install -g generator-atomic-react
 ```
 
 ## Setting up projects
@@ -28,29 +31,39 @@ npm install -g generator-react-webpack-redux
 mkdir my-new-project && cd my-new-project
 
 # Run the generator
-yo react-webpack-redux
+yo atomic-react
 ```
 
 ## Generating new reducers
 ```bash
-yo react-webpack-redux:reducer my/namespaced/reducers/name
-yo react-webpack-redux:reducer items
+yo atomic-react:reducer my/namespaced/reducers/name
+yo atomic-react:reducer items
 ```
 
 ## Generating new actions
 ```bash
-yo react-webpack-redux:action my/namespaced/actions/name
-yo react-webpack-redux:action items/addItem
+yo atomic-react:action my/namespaced/actions/name
+yo atomic-react:action items/addItem
 ```
 
-## Generating new components
+## Generating new atoms
 ```bash
-yo react-webpack-redux:component my/namespaced/components/name
+yo atomic-react:atom my/namespaced/components/name
 ```
 
-## Generating new containers
+## Generating new molecules
 ```bash
-yo react-webpack-redux:container my/namespaced/container/Name
+yo atomic-react:molecule my/namespaced/components/name
+```
+
+## Generating new organisms
+```bash
+yo atomic-react:organism my/namespaced/components/name
+```
+
+## Generating new ecosystems
+```bash
+yo atomic-react:ecosystem my/namespaced/container/Name
 ```
 
 ## Usage
