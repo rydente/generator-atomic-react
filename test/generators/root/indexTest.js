@@ -3,7 +3,7 @@ let path = require('path');
 let assert = require('yeoman-assert');
 let helpers = require('yeoman-test');
 
-describe('react-webpack-redux:root', () => {
+describe('atomic-react:root', () => {
 
   let generatorDispatcher = path.join(__dirname, '../../../generators/root');
 

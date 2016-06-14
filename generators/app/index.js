@@ -30,7 +30,7 @@ module.exports = generator.Base.extend({
     ).on('end', () => {
 
       // Run the create root method
-      this.composeWith('react-webpack-redux:root', {
+      this.composeWith('atomic-react:root', {
         args: ['Root']
       });
 

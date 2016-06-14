@@ -1,1 +1,1 @@
-/* Populated by react-webpack-redux:action */
+/* Populated by atomic-react:action */

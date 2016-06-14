@@ -4,7 +4,7 @@ let assert = require('yeoman-assert');
 let helpers = require('yeoman-test');
 let fs = require('fs-extra');
 
-describe('react-webpack-redux:action', () => {
+describe('atomic-react:action', () => {
   const appSource = path.join(__dirname, '../../../generators/root/templates/App.js');
   const generatorAction = path.join(__dirname, '../../../generators/action');
   const constSource = path.join(__dirname, '../../../generators/root/templates/const.js');
@@ -62,7 +62,7 @@ describe('react-webpack-redux:action', () => {
 
     it('should add the action to App.js', (done) => {
       createGeneratedAction('getItems', () => {
-        assert.fileContent(appPath, '/* Populated by react-webpack-redux:action */');
+        assert.fileContent(appPath, '/* Populated by atomic-react:action */');
         assert.fileContent(appPath, 'getItems: require(\'../actions/getItems.js\')');
         done();
       });
@@ -101,7 +101,7 @@ describe('react-webpack-redux:action', () => {
 
     it('should add the action to App.js', (done) => {
       createGeneratedAction('name/space/getItems', () => {
-        assert.fileContent(appPath, '/* Populated by react-webpack-redux:action */');
+        assert.fileContent(appPath, '/* Populated by atomic-react:action */');
         assert.fileContent(appPath, 'getItems: require(\'../actions/name/space/getItems.js\')');
         done();
       });
