@@ -42,7 +42,7 @@ module.exports = generator.Base.extend({
     // Copy the app container
     this.fs.copy(
       this.templatePath('App.js'),
-      this.destinationPath('src/containers/App.js')
+      this.destinationPath('src/components/environment/App.js')
     );
   }
 });

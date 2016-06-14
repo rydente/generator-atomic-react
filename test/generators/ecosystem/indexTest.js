@@ -56,9 +56,9 @@ describe('atomic-react:ecosystem', () => {
     });
   });
 
-  describe('When creating a new name spaced container', () => {
+  describe('When creating a new name spaced ecosystem', () => {
 
-    it('should create the container file', (done) => {
+    it('should create the ecosystem file', (done) => {
       createGeneratedEcosystem('name/space/TestEcosystem', () => {
         assert.file(['src/components/ecosystems/name/space/TestEcosystem.js']);
         done();

@@ -18,7 +18,7 @@ describe('react-webpack-redux:root', () => {
       .on('end', callback);
   }
 
-  it('should create the root reducer, redux store, base container and custom index.js', (done) => {
+  it('should create the root reducer, redux store, main environment and custom index.js', (done) => {
 
     createGeneratedDispatcher('Dispatcher', () => {
 
@@ -26,7 +26,7 @@ describe('react-webpack-redux:root', () => {
         'src/index.js',
         'src/stores/index.js',
         'src/reducers/index.js',
-        'src/containers/App.js',
+        'src/components/environment/App.js',
         'src/actions/const.js'
       ]);
 
