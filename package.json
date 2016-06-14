@@ -1,6 +1,6 @@
 {
   "name": "generator-atomic-react",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Yeoman generator for ReactJS and Flux (redux) via Webpack using Atomic Design",
   "keywords": [
     "yeoman-generator",
