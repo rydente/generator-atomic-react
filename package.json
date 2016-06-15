@@ -28,6 +28,10 @@
     "type": "git",
     "url": "git://github.com/rydente/generator-atomic-react.git"
   },
+  "bugs": {
+      "url": "https://github.com/rydente/generator-atomic-react/issues",
+      "email": "ryayak1460@protingumas.com"
+  },
   "scripts": {
     "test": "mocha",
     "release:major": "npm version major && npm publish && git push --follow-tags",
