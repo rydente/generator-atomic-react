@@ -1,7 +1,7 @@
 # generator-atomic-react
 > Generator-React-Webpack - with Flux Support (using Redux)
 
-[![Build Status](https://travis-ci.org/ryayak1460/generator-atomic-react.svg?branch=master)](https://travis-ci.org/ryayak1460/generator-atomic-react) ![Amount of Downloads per month](https://img.shields.io/npm/dm/generator-atomic-react.svg "Amount of Downloads") [![Dependency Status](https://david-dm.org/ryayak1460/generator-atomic-react.svg)](https://david-dm.org/ryayak1460/generator-atomic-react) [![devDependency Status](https://david-dm.org/ryayak1460/generator-atomic-react/dev-status.svg)](https://david-dm.org/ryayak1460/generator-atomic-react#info=devDependencies) ![Node Version](https://img.shields.io/node/v/generator-atomic-react.svg "Node Version")
+[![Build Status](https://travis-ci.org/ryayak1460/generator-atomic-react.svg?branch=master)](https://travis-ci.org/ryayak1460/generator-atomic-react) ![Amount of Downloads per month](https://img.shields.io/npm/dm/generator-atomic-react.svg "Amount of Downloads") ![Node Version](https://img.shields.io/node/v/generator-atomic-react.svg "Node Version")
 
 ## What is it for?
 This generator can be used to create and manage projects that use React, Webpack and Flux (using [Redux](https://github.com/rackt/redux) as
