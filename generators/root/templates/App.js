@@ -10,7 +10,7 @@ import React, {
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Main from '../components/ecosystems/Main';
+import Main from '../ecosystems/Main';
 /* Populated by atomic-react:reducer */
 class App extends Component {
   render() {

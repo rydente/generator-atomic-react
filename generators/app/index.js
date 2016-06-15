@@ -28,12 +28,9 @@ module.exports = generator.Base.extend({
         link: 'strong'
       }
     ).on('end', () => {
-
-      // Copy ecosystem template
-      this.fs.move(
-        this.destinationPath('src/components/Main.js'),
-        this.destinationPath('src/components/ecosystems/Main.js')
-      );
+      // Move Main ecosystem
+      var original = this.destinationPath('src/components/Main.js'),
+        atomic = this.destinationPath('src/components/ecosystems/Main.js')
 
       // Run the create root method
       this.composeWith('atomic-react:root', {
@@ -42,6 +39,7 @@ module.exports = generator.Base.extend({
 
       // Install redux and react bindings as requirement
       this.npmInstall(['redux', 'react-redux'], { save: true });
+      this.fs.move(original, atomic)
     });
   }
 });
