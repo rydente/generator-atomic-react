@@ -3,8 +3,6 @@ node_js:
   - '6.2'
   - '6.1'
   - '6.0'
-  - '5.11'
-  - '4.4'
 before_install:
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-atomic-react' ]; then cd .. && eval "mv $currentfolder generator-atomic-react" && cd generator-atomic-react; fi
