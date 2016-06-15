@@ -46,10 +46,38 @@ const getBaseName = function(path) {
   return items[items.length - 1];
 };
 
+const moveToAtomic = (component, type, generator, hasSuffix = true) => {
+  let fs = generator.fs,
+    [original, atomic, test, hypothesis, oldFashioned, modern] = [
+      `src/components/${component}${hasSuffix ? 'Component' : ''}.js`,
+      `src/components/${type}s/${component}.js`,
+      `test/components/${component}${hasSuffix ? 'Component' : ''}Test.js`,
+      `test/components/${type}s/${component}Test.js`,
+      `src/styles/${component}.css`,
+      `src/styles/${type}s/${component}.css`
+    ].map(s => generator.destinationPath(s)),
+    fixFile = path => replaceWithAtomic(fs, component, type, path)
+  fs.move(original, atomic)
+  fs.move(test, hypothesis)
+  if (hasSuffix) {
+    fs.move(oldFashioned, modern)
+    fixFile(atomic)
+    fixFile(hypothesis)
+  }
+}
+
+const replaceWithAtomic = (fs, component, type, path) => {
+  fs.write(path,
+    fs.read(path)
+      .replace(new RegExp(`${component}Component`, 'g'), component)
+      .replace(new RegExp(`(components|styles)/+(?=${component})`, 'g'), `$1/${type}s/`))
+}
+
 module.exports = {
   read: read,
   write: write,
   getDestinationPath: getDestinationPath,
   getBaseName: getBaseName,
-  getRelativePath: getRelativePath
+  getRelativePath: getRelativePath,
+  moveToAtomic: moveToAtomic
 }

@@ -1,5 +1,6 @@
 'use strict';
 let generator = require('yeoman-generator');
+let { moveToAtomic } = require('../app/utils')
 
 module.exports = generator.Base.extend({
 
@@ -11,7 +12,8 @@ module.exports = generator.Base.extend({
   writing: function() {
 
     // Build options
-    let opts = {};
+    let opts = {},
+      generator = this
 
     if(this.options.stateless === true) {
       opts.stateless = true;
@@ -23,5 +25,9 @@ module.exports = generator.Base.extend({
     }, {
       local: require.resolve('generator-react-webpack/generators/component')
     });
+    this.fs.commit([], () => {
+      let cap = generator.name.charAt(0).toUpperCase() + generator.name.slice(1)
+      moveToAtomic(cap, 'molecule', generator)
+    })
   }
 });

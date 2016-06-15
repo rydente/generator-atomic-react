@@ -1,5 +1,6 @@
 'use strict';
 let generator = require('yeoman-generator');
+let { moveToAtomic } = require('./utils')
 
 module.exports = generator.Base.extend({
 
@@ -28,9 +29,7 @@ module.exports = generator.Base.extend({
         link: 'strong'
       }
     ).on('end', () => {
-      var original = this.destinationPath('src/components/Main.js'),
-        atomic = this.destinationPath('src/components/ecosystems/Main.js'),
-        test = this.destinationPath('test/components/MainTest.js'),
+      var atomic = this.destinationPath('src/components/ecosystems/Main.js'),
         hypothesis = this.destinationPath('test/components/ecosystems/MainTest.js')
 
       // Run the create root method
@@ -42,8 +41,7 @@ module.exports = generator.Base.extend({
       this.npmInstall(['redux', 'react-redux'], { save: true });
 
       // Move Main ecosystem and test
-      this.fs.move(original, atomic)
-      this.fs.move(test, hypothesis)
+      moveToAtomic('Main', 'ecosystem', this, false)
 
       // I know this is a horrible idea.  PRs welcome.
       // Relocate the Yeoman image in the main ecosystem component.
