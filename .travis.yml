@@ -7,4 +7,4 @@ node_js:
   - '4.4'
 before_install:
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-react-webpack-redux' ]; then cd .. && eval "mv $currentfolder generator-react-webpack-redux" && cd generator-react-webpack-redux; fi
+  - if [ "$currentfolder" != 'generator-atomic-react' ]; then cd .. && eval "mv $currentfolder generator-atomic-react" && cd generator-atomic-react; fi
