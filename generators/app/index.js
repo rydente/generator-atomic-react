@@ -28,7 +28,6 @@ module.exports = generator.Base.extend({
         link: 'strong'
       }
     ).on('end', () => {
-      // Move Main ecosystem
       var original = this.destinationPath('src/components/Main.js'),
         atomic = this.destinationPath('src/components/ecosystems/Main.js')
 
@@ -39,7 +38,15 @@ module.exports = generator.Base.extend({
 
       // Install redux and react bindings as requirement
       this.npmInstall(['redux', 'react-redux'], { save: true });
+
+      // Move Main ecosystem
       this.fs.move(original, atomic)
+
+      // I know this is a horrible idea.  PRs welcome.
+      // Relocate the Yeoman image in the main ecosystem component.
+      this.fs.write(atomic,
+        this.fs.read(atomic)
+          .replace(/[.][.](?=\/images\/yeoman[.]png)/, '../..'))
     });
   }
 });
